@@ -1,0 +1,28 @@
+<ul class="grid-container">
+    <%= showcase %>
+    <div class="carousel" gorilla-click="handleCarouselMotion">
+        <svg class="icon icon-arrow icon-arrow-front">
+            <use href="/assets/images/sprite.svg#icon-arrow"></use>
+        </svg>
+
+        <div class="grid-lists">
+        <% bookListData.forEach(function(curData, index) { %>
+            <li class="grid-item" gorilla-click="displaySelectedCard" id="<%= index %>">
+                <div class="grid-img-container">
+                    <img src="<%= curData.image %>" class="grid-thumb-nail">
+                </div>
+                <div class="grid-book-info">
+                    <p class="grid-title"><%= curData.title %></p>
+                </div>
+            </li>
+        <% }); %>
+            <li class="grid-item show-more-card">
+                <%= buttonMore %>
+            </li>
+        </div>
+
+        <svg class="icon icon-arrow icon-arrow-back">
+            <use href="/assets/images/sprite.svg#icon-arrow"></use>
+        </svg>
+    </div>
+</ul>

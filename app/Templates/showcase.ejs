@@ -1,0 +1,15 @@
+<div class="showcase-book">
+    <% if(showcase) { %>
+        <div class="showcase-img-container">
+            <img src="<%= showcase.image %>" class="showcase-thumb-nail">
+        </div>
+        <div class="showcase-book-info">
+            <p class="showcase-title"><%= showcase.title %></p>
+            <p class="showcase-author">지은이&nbsp; : &nbsp;<%= showcase.author %></p>
+            <p class="showcase-publisher"><%= showcase.publisher %></p>
+            <p class="showcase-summary"><%= showcase.description %></p>
+            <p class="showcase-publication-date">출간일&nbsp; : &nbsp;<%= showcase.pubdate %></p>
+            <p class="url">URL&nbsp; : &nbsp;<%= showcase.url %></p>
+        </div>
+    <% } %>
+</div>

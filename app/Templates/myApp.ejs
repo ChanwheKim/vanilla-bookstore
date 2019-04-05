@@ -1,0 +1,22 @@
+<div class="my-app">
+    <%= header %>
+    <div class="control-panel">
+        <div class="view-icons" gorilla-click="controlView">
+            <svg class="icon icon-list">
+                <use href="/assets/images/sprite.svg#icon-list"></use>
+            </svg>
+            <svg class="icon icon-grid">
+                <use href="/assets/images/sprite.svg#icon-grid"></use>
+            </svg>
+        </div>
+    </div>
+    <section class="content">
+        <%= sideBar %>
+        <% if(type === 'list') { %>
+            <%= listContainer %>
+        <% } else { %>
+            <%= cardContainer %>
+        <% } %>
+    </section>
+    <%= footer %>
+</div>

@@ -1,0 +1,23 @@
+<ul class="list-container">
+    <% bookListData.forEach(function(curData, index) { %>
+        <li class="list-item" id="<%= index %>">
+            <div class="img-container">
+                <img src="<%= curData.image %>" alt="" class="thumb-nail">
+            </div>
+            <div class="book-info">
+                <p class="title"><%= curData.title %></p>
+                <p class="author">지은이&nbsp; : &nbsp;<%= curData.author %></p>
+                <p class="publisher"><%= curData.publisher %></p>
+                <p class="summary"><%= curData.shortDescription %></p>
+                <p class="publication-date">출간일&nbsp; : &nbsp;<%= curData.pubdate %></p>
+                <p class="url">URL&nbsp; : &nbsp;<%= curData.url %></p>
+            </div>
+            <div class="call-to-action">
+                <p class="price-label">₩ <%= curData.price %></p>
+                <button class="btn btn-purchase">Buy this book</button>
+                <button class="btn btn-add-to-cart" gorilla-click="addToCart">Add to cart</button>
+            </div>
+        </li>
+    <% }); %>
+    <%= buttonMore %>
+</ul>

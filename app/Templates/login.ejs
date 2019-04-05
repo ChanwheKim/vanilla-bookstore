@@ -1,0 +1,14 @@
+<div class="<%= display ? 'modal' : 'modal inactive' %>">
+    <div class="modal__wrapper">
+        <div class="modal__wrapper-close" gorilla-click="hideModalWindow">
+            <svg class="icon icon-cross-modal">
+                <use href="/assets/images/sprite.svg#icon-cross"></use>
+            </svg>
+        </div>
+        <h2>Connect with your social network</h1>
+        <button class="btn btn-login" gorilla-click="controlSignUp">
+            <img src="/assets/images/google.png" alt="" class="btn-login-img">
+            <span>Connect with Google</span>
+        </button>
+    </div>
+</div>
